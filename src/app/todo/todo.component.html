@@ -1,0 +1,10 @@
+<div>
+    This is my shoppping list
+   
+<ul *ngFor = "let item of items; index as i"> 
+    <li [ngClass]="clicked[i] ? 'strike': ''" (click)="strike(i)">{{item}}</li>
+</ul>
+
+
+<input type="text" [(ngModel)]="newItem"/><input type="button" (click)="addItem()" value="Add"/>
+</div>
